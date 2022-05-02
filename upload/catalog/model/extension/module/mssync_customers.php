@@ -59,7 +59,7 @@ class ModelExtensionModuleMssyncCustomers extends Model {
         $this->model_extension_module_mssync_utils->writeToLog($log);
         return $ms_res["id"];
     }
-    
+
     /**
      * 
      * @return string
@@ -69,7 +69,7 @@ class ModelExtensionModuleMssyncCustomers extends Model {
      * anatoliy.iwanov@yandex.ru
      */
     public function newPassword() {
-        
+
         $password_length = 8;
         $new_password = "";
 
@@ -84,10 +84,10 @@ class ModelExtensionModuleMssyncCustomers extends Model {
         $letters_count_max = $password_length - $numbers_count;
         $letters_count = rand(5, $letters_count_max);
 
-
         for ($i = 0; $i < $numbers_count; $i ++) {
             $pass_numbers[] = rand(0, 9);
-        } for ($i = 0; $i < $letters_count; $i++) {
+        }
+        for ($i = 0; $i < $letters_count; $i++) {
             $rand_key = rand(0, $all_symbols_in_letters);
             $pass_letters[] = $letters[$rand_key];
         }
@@ -104,7 +104,6 @@ class ModelExtensionModuleMssyncCustomers extends Model {
 
         return $new_password;
     }
-    
 
     /**
      * 

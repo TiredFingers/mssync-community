@@ -14,8 +14,6 @@ class ControllerExtensionModuleMssync extends Controller {
     }
 
     //catalog/model/checkout/order/addOrderHistory/after
-    //&$route, &$args, &$output
-    
     public function addOrder(&$route, &$args, &$output) {
                 
         if ($this->config->get("mssync_status")) {
